@@ -17,7 +17,7 @@ var inline_src = (<><![CDATA[
 const div = document.getElementById("content-area");
 
 if (div) {
-    div.innerText = div.innerText.replace(/((\d+)\/(\d+)\/(\d+) (\d+):(\d+):(\d+))/g, getLocalString);
+    div.innerHTML = div.innerHTML.replace(/((\d+)\/(\d+)\/(\d+) (\d+):(\d+):(\d+))/g, getLocalString);
 }
 
 

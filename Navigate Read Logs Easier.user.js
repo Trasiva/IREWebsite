@@ -2,7 +2,8 @@
 // @name         Navigate Read Logs Easier
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  Why doesn't the logs have an easy way to navigate besides going back to
+//                   the previous page or manipulate the url?
 // @author       Patroklos
 // @match        http://www.ironrealms.com/game/orglog?*
 // @grant        none

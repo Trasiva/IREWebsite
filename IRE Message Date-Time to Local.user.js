@@ -2,8 +2,8 @@
 // @name         IRE Message Date/Time to Local
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  shows how to use babel compiler
-// @author       You
+// @description  We don't all live in GMT, so show us our local times!
+// @author       Patroklos
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.min.js
 // @match        http://www.ironrealms.com/game/messages*

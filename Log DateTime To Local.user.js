@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         IRE Logs Date/Time to Local
+// @name         IRE: Logs DateTime to Local
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Take IRE Logs and converts them to local time.

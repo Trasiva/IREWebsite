@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Navigate Read Logs Easier
+// @name         IRE: Log Navigator
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Why doesn't the logs have an easy way to navigate besides going back to

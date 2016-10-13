@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Change Message Textbox to TextArea
+// @name         IRE: Message Textbox to TextArea
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Turn the textbox into a text area so you can actually read what you write.

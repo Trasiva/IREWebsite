@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         IRE Message Date/Time to Local
+// @name         IRE: Message DateTime to Local
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  We don't all live in GMT, so show us our local times!

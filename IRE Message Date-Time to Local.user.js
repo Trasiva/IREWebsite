@@ -72,7 +72,7 @@ function getLocalString(thisDate, bTable) {
     if (hours > 23) {
         hours = '0';
     }
-    hours = padString(hours);
+    hours = padString(hours.toString());
     const minutes = padString(thisDate.getMinutes().toString());
     if (bTable) {
         return `${month}/${day} ${hours}:${minutes}`;
@@ -84,7 +84,7 @@ function getLocalString(thisDate, bTable) {
 
 function padString(myString) {
     const pad = "00";
-    myString = pad.substring(0, pad.length - myString.length) + myString.toString();
+    myString = pad.substring(0, pad.length - myString.length) + myString;
     return myString;
 }
 

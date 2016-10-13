@@ -84,7 +84,7 @@ function getLocalString(thisDate, bTable) {
 
 function padString(myString) {
     const pad = "00";
-    myString = pad.substring(0, pad.length - myString.length) + myString;
+    myString = pad.substring(0, pad.length - myString.length) + myString.toString();
     return myString;
 }
 

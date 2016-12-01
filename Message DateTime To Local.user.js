@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         IRE: Message DateTime to Local
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.11
 // @description  We don't all live in GMT, so show us our local times!
 // @author       Patroklos
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js

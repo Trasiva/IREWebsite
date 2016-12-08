@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         IRE: Logs DateTime to Local
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.02
 // @description  Take IRE Logs and converts them to local time.
 // @author       Patroklos
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js

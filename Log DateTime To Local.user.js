@@ -41,7 +41,7 @@ function getLocalString(thisDate) {
       const year = (thisDate.getYear() + 1900).toString().substring(2,4);
       const month = padString(thisDate.getMonth().toString());
       const day = padString(thisDate.getDate().toString());
-      let hours = thisDate.getHours() + (isDST(thisDate) ? 0 : 1);
+      let hours = thisDate.getHours() + (isDST(thisDate) ? 1 : 0);
       if (hours > 23) {
           hours = '0';
       }

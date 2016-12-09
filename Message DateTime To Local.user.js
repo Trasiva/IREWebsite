@@ -58,7 +58,7 @@ function getUTCDate(dateString) {
     if (arrDate.length === 3) {
         const msgTime = arrDate[2].split(':');
         if (msgTime.length === 2) {
-            return new Date(Date.UTC(currentYear, arrDate[0], arrDate[1], msgTime[0], msgTime[1]));
+            return new Date(Date.UTC(currentYear, arrDate[0], (Number(arrDate[1]) - 1).toString(), msgTime[0], msgTime[1]));
         }
     }
     return null;
@@ -66,7 +66,7 @@ function getUTCDate(dateString) {
 
 function getLocalString(thisDate, bTable) {
 	const year = (thisDate.getYear() + 1900).toString().substring(2,4);
-    const month = padString(thisDate.getMonth().toString());
+    const month = padString((thisDate.getMonth() + 1).toString());
     const day = padString(thisDate.getDate().toString());
     let hours = thisDate.getHours() + (isDST(thisDate) ? 1 : 0);
     if (hours > 23) {

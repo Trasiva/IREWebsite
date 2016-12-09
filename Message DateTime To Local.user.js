@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         IRE: Message DateTime to Local
 // @namespace    http://tampermonkey.net/
-// @version      0.12
+// @version      0.13
 // @description  We don't all live in GMT, so show us our local times!
 // @author       Patroklos
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js
@@ -52,13 +52,12 @@ if (container) {
 }
 
 function getUTCDate(dateString) {
-    const currentYear = new Date(Date.now()).getYear() + 1900;
     const arrDate = dateString.split('/');
-
-    if (arrDate.length === 3) {
-        const msgTime = arrDate[2].split(':');
+    
+    if (arrDate.length === 4) {
+        const msgTime = arrDate[3].split(':');
         if (msgTime.length === 2) {
-            return new Date(Date.UTC(currentYear, arrDate[0], (Number(arrDate[1]) - 1).toString(), msgTime[0], msgTime[1]));
+            return new Date(Date.UTC(arrDate[0], (Number(arrDate[1]) - 1).toString(), arrDate[2], msgTime[0], msgTime[1]));
         }
     }
     return null;

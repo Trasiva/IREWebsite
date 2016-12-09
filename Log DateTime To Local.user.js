@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         IRE: Logs DateTime to Local
 // @namespace    http://tampermonkey.net/
-// @version      0.11
+// @version      0.12
 // @description  Take IRE Logs and converts them to local time.
 // @author       Patroklos
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js
@@ -28,7 +28,7 @@ function getUTCDate(dateString) {
       if (arrDate.length === 3) {
           const msgTime = arrDateTime[1].split(':');
           if (msgTime.length === 3) {
-              return new Date(Date.UTC(arrDate[0], arrDate[1], arrDate[2], msgTime[0], msgTime[1], msgTime[2]));
+              return new Date(Date.UTC(arrDate[0], (Number(arrDate[1]) - 1).toString(), arrDate[2], msgTime[0], msgTime[1], msgTime[2]));
           }
       }
     }
@@ -39,7 +39,7 @@ function getLocalString(thisDate) {
 		thisDate = getUTCDate(thisDate);
     if (thisDate !== null){
       const year = (thisDate.getYear() + 1900).toString().substring(2,4);
-      const month = padString(thisDate.getMonth().toString());
+      const month = padString((thisDate.getMonth() + 1).toString());
       const day = padString(thisDate.getDate().toString());
       let hours = thisDate.getHours() + (isDST(thisDate) ? 1 : 0);
       if (hours > 23) {
